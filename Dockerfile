@@ -68,7 +68,8 @@ RUN mim install mmengine
 RUN apt-get update && apt-get install -y libturbojpeg-dev
 RUN git clone -b v1.5.3 https://github.com/open-mmlab/mmcv.git && \
     cd mmcv && \
-    pip install -e .
+    MMCV_WITH_OPS=1 FORCE_CUDA=1 TORCH_CUDA_ARCH_LIST="7.5" \
+    python setup.py develop
 
 RUN pip3 install mmdet==2.25.1
 RUN pip3 install --no-deps mmdet3d==1.0.0rc5
