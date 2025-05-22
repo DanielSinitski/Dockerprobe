@@ -78,6 +78,7 @@ RUN pip3 install pyquaternion
 RUN pip3 install lyft-dataset-sdk
 RUN pip3 install trimesh
 RUN pip3 install "numba==0.57.1"
+RUN pip3 install "networkx>=2.6,<4.0"
 
 #########
 RUN git clone -b v0.30.0 https://github.com/open-mmlab/mmsegmentation.git && \
