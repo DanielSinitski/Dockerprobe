@@ -1,5 +1,3 @@
-# This is the ROS2 Base Image for DNN deployment in the STADT:up Consortia with cuda installed
-
 FROM nvidia/cuda:11.8.0-cudnn8-devel-ubuntu22.04
 ENV FORCE_CUDA="1"
 ENV DEBIAN_FRONTEND=noninteractive
