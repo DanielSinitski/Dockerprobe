@@ -38,7 +38,6 @@ RUN pip3 install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url 
 RUN pip3 install spconv-cu118
 RUN pip3 install numpy
 RUN pip3 install qoi
-RUN pip3 install "numba==0.57"
 ENV TORCH_CUDA_ARCH_LIST="7.5"
 
 RUN apt-get update && apt-get install -y \
